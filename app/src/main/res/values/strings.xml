@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FundaHack</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sign_in_with_google_text">Sign in with Google</string>
+    <string name="sign_in_with_facebook_text">Sign in with Facebook</string>
+    <string name="sign_in_with_email_text">Sign in with Email</string>
+    <string name="sign_up_with_google_text">Sign up with Google</string>
+    <string name="sign_up_with_facebook_text">Sign up with Facebook</string>
+    <string name="sign_up_with_email_text">Sign up with Email</string>
+    <string name="don_t_have_an_account_text">Don\'t have an account?</string>
+    <string name="share_text">Share</string>
+    <string name="signup_text">SignUp</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="name_text">Name</string>
+    <string name="confirmed_password_text">Confirmed Password</string>
+</resources>
