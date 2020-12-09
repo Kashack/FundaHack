@@ -1,34 +1,15 @@
-const jwt = require('express-jwt');
-const jwtAuthz = require('express-jwt-authz');
-const jwksRsa = require('jwks-rsa');
 const express = require('express');
-const shortId = require('shortid')
 const app = express.Router();
 const OpenTok = require('opentok'),
 const sessions = require('../models/session')
 const recording = require('../models/recording')
-const broadcast = require('../models/live')
+const broadcasted = require('../models/live')
+const auth = require('./authentication')
+const authz = require('./authorization')
 
 const opentok = new OpenTok(process.env.vonApiKey, process.env.vonApiSecret);
 
-const checkJwt = jwt({
-    // Dynamically provide a signing key
-    // based on the kid in the header and 
-    // the signing keys provided by the JWKS endpoint.
-    secret: jwksRsa.expressJwtSecret({
-      cache: true,
-      rateLimit: true,
-      jwksRequestsPerMinute: 5,
-      jwksUri: `https://YOUR_DOMAIN/.well-known/jwks.json`
-    }),
-  
-    // Validate the audience and the issuer.
-    audience: 'YOUR_API_IDENTIFIER',
-    issuer: `https://YOUR_DOMAIN/`,
-    algorithms: ['RS256']
-  });
-  
-const checkScopes = jwtAuthz([ 'read:messages' ]);
+app.use(auth())
 
 function session(){
     // A Session with an automatic archiving
@@ -204,7 +185,7 @@ app.post('/createsession', (req,res)=>{
     }
 })
 
-app.post('/startrecording', (req,res)=>{
+app.post('/startrecording',authz.videos, (req,res)=>{
     var record = startRecord(req.body.sessionId, req.body.name)
     if(record){
         var obj = new recording({
@@ -219,7 +200,7 @@ app.post('/startrecording', (req,res)=>{
     }
 })
 
-app.post('/stoprecording', (req,res)=>{
+app.post('/stoprecording', authz.videos, (req,res)=>{
     var stop = stopRecord(req.body.archiveId)
     if(stop){
         res.send({archive: stop})
@@ -228,17 +209,17 @@ app.post('/stoprecording', (req,res)=>{
     }
 })
 
-app.post('/deleterecording', (req,res)=>{
+app.post('/deleterecording', authz.videos, (req,res)=>{
     var del = deleteRecording(req.body.archiveId)
     if(del){
         recording.deleteOne({archiveId: req.body.archiveId}, ()=>{})
-        res.send({message: 'deleted'})
+        res.status(204).send({message: 'deleted'})
     }else{
         res.status(500).send({message: 'An error occured, try again'})
     }
 })
 
-app.get('/getrecording/:archiveId', (req,res)=>{
+app.get('/getrecording/:archiveId', authz.videos, (req,res)=>{
     var archive = getRecording(req.params.archiveId)
     if(archive){
         res.send({archive})
@@ -256,10 +237,10 @@ app.get('/getallrecording/:page', (req,res)=>{
     }
 })
 
-app.post('/startlivebroadcast', (req,res)=>{
+app.post('/startlivebroadcast', authz.broadcast, (req,res)=>{
     var broadcast = liveStart(req.body.sessionId, req.body.resolution)
     if(broadcast){
-        const obj = new broadcast({
+        const obj = new broadcasted({
             sessionId: req.body.sessionId,
             broadcastId: broadcast.id
         })
@@ -270,7 +251,7 @@ app.post('/startlivebroadcast', (req,res)=>{
     }
 })
 
-app.post('/stoplivebroadcast', (req,res)=>{
+app.post('/stoplivebroadcast', authz.broadcast, (req,res)=>{
     var broadcast = liveStop(req.body.broadcastId)
     if(broadcast){
 
@@ -289,7 +270,7 @@ app.get('/getlivebroadcasts/:page', (req,res)=>{
     }
 })
 
-app.get('/getallstreams/:sessionId', (req,res)=>{
+app.get('/getallstreams/:sessionId', authz.videos, (req,res)=>{
     var stream = getStreams(req.params.sessionId)
     if(stream){
         res.send({stream})
