@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express.Router();
-const OpenTok = require('opentok'),
+const OpenTok = require('opentok')
 const sessions = require('../models/session')
 const recording = require('../models/recording')
 const broadcasted = require('../models/live')

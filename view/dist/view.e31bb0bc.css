@@ -1,0 +1,264 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4.5rem;
+    width: 100vw;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px grey;
+}
+nav img{
+    height: 3rem;
+    width: 3rem;
+    margin-left: 3rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav ul li{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: orange;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .div{
+    width: 15%;
+    margin-right: 3rem;
+}
+.nav .i{
+    color: orange;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.signup{
+    height: 2.5rem;
+    color:white;
+    background-color: orange;
+    width: 5rem;
+    cursor: pointer;
+    border:0px;
+}
+.logout, .login{
+    height: 2.5rem;
+    color:orange;
+    border: 1px solid orange;
+    width: 5rem;
+    cursor: pointer;
+}
+.login:hover, .logout:hover{
+    color: white;
+    background-color: orange;
+}
+.signup:hover{
+    color:orange;
+    background-color: white;
+    border: 1px solid orange;
+}
+.picture{
+    margin-right: 3rem;
+    height:3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.loader{
+    margin-left: 45%;
+    margin-top: 25%;
+}html, body{
+    margin:0px;
+    body:0px;
+}
+.cover-home{
+    background-color: #ddd;
+    width: 100vw;
+    padding-bottom: 4rem;
+}
+.explain{
+    height: 17.5rem;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+.exp{
+    background-color: #ddd;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+.explain .left{
+    font-size: large;
+    width: 45%;
+}
+.explain .left h1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.explain .left .shift{
+    margin-left: 3rem;
+}
+.explain .left h4{
+    margin-top: 1rem;
+    font-size: large;
+}
+.explain img{
+    width: 35%;
+    height: 95%;
+    margin-top: 10%;
+}
+.exp .left{
+    width: 40%;
+    font-size: medium;
+    margin-top: 5rem;
+}
+.exp .right{
+    width:50%;
+    margin-top: 3rem;
+}
+.exp .right .toter{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.exp .card{
+    height: 15rem;
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.card:hover{
+    color:white;
+    background-color: orange;
+}
+.card img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+.courses{
+    margin-top: 2rem;
+}
+.mini-card{
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.mini-card img{
+    width: 100%;
+    height: 4.5rem;
+    border-radius: 1rem;
+}
+.mini-card .lang{
+    display:flex;
+    width: 35%;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.mini-card .lang div{
+    height:0.5rem;
+    width:0.5rem;
+    background-color: red;
+    border-radius: 50%;
+}
+.mini-card h2{
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 0.5rem;
+}
+.mini-card .downloads, .mini-card .stars{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mini-card .downloads div{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: smaller;
+}
+.mini-card .downloads .smaller{
+    width: 30%;
+}
+.mini-card .stars div{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:orange;
+}
+.mini-card .stars .i{
+    color:orange;
+}
+.mini-card hr{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 100%;
+    color: orange;
+}
+.courses .shows, .soft .shows, .hard .shows{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+}
+.soft{
+    margin-top: 3rem;
+}
+.soft h1, .courses h1, .course-exp{
+    margin-left: 4rem;
+}
+.soft .cat{
+    width: 15rem;
+    background-color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    box-shadow: 1.5px 1.5px 2px 1.5px grey;
+}
+.soft .cat img{
+    width:100%;
+    height:10rem;
+}
+.soft .cat h3{
+    margin: 0rem 0px 0.5rem 0.5rem;
+}
+footer{
+    width:100%;
+    background-color: white;
+    display: flex;
+}
+footer .cover{
+    width: 65%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: smaller;
+}
+.log img{
+    height: 3rem;
+    width: 3rem;
+}
+.us{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
