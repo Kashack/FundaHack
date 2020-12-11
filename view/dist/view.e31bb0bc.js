@@ -50446,6 +50446,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactFontawesome = require("@fortawesome/react-fontawesome");
 
+var _auth0React = require("@auth0/auth0-react");
+
 var _freeSolidSvgIcons = require("@fortawesome/free-solid-svg-icons");
 
 require("./home.css");
@@ -50454,55 +50456,117 @@ var _IMG20201209WA = _interopRequireDefault(require("./assets/IMG-20201209-WA001
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Home() {
+function Home(props) {
+  var _useAuth = (0, _auth0React.useAuth0)(),
+      isAuthenticated = _useAuth.isAuthenticated;
+
   var map = [{
-    title: "A big boy who lives in Calabar",
+    title: "Design principles",
+    url: "https://jfitzgeraldgroup.com/wp-content/uploads/2016/10/graphic-design-tools-Feature_1290x688_MS-1080x675.jpg",
+    type: "soft",
     language: "English",
     lesson: "10",
     live: true,
     rate: 4,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "Design autonomy",
+    url: "https://lh3.googleusercontent.com/JlePQ6By1eAoX7_a317nOB0K1OUUUQuY4o0x9VR8MdXYmmtUIDEPf7K7mvU9Dafii42zp0Xi6ljovJTc1W351Yhv898FHTqD3t0uhhY=w2000",
+    type: "soft",
     language: "English",
-    lesson: "10",
+    lesson: "15",
     live: true,
     rate: 4,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "Python",
+    url: "https://datawider.com/wp-content/uploads/2019/11/How-to-Learn-Python.jpg",
+    type: "soft",
     language: "English",
-    lesson: "10",
+    lesson: "13",
+    live: false,
+    rate: 3,
+    votes: 10
+  }, {
+    title: "Bead Making",
+    url: "https://i.pinimg.com/originals/c8/53/cc/c853cc676082686b1c897ff158aef280.jpg",
+    type: "hard",
+    language: "English",
+    lesson: "14",
     live: true,
+    rate: 5,
+    votes: 15
+  }, {
+    title: "Sculpturing",
+    url: "https://www.superprof.co.uk/blog/wp-content/uploads/2019/08/igor-ferreira-IgVO4R3AlaU-unsplash-1060x596.jpg",
+    type: "hard",
+    language: "English",
+    lesson: "9",
+    live: false,
     rate: 4,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "Cooking Melon Soup",
+    url: "https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/egusi-soup-fried.jpg",
+    type: "hard",
     language: "English",
     lesson: "10",
     live: true,
-    rate: 4,
+    rate: 3,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "Javascript",
+    url: "https://www.simplilearn.com/ice9/free_resources_article_thumb/X_Reasons_to_learn_Javascript.jpg",
+    type: "soft",
     language: "English",
-    lesson: "10",
+    lesson: "11",
     live: true,
-    rate: 4,
+    rate: 5,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "Webpack",
+    url: "https://miro.medium.com/max/1634/1*Qo4yWofQHQKSOtLtTD54Wg.png",
+    type: "soft",
     language: "English",
-    lesson: "10",
+    lesson: "17",
     live: true,
-    rate: 4,
+    rate: 5,
     votes: 15
   }, {
-    title: "A big boy who lives in Calabar",
+    title: "React",
+    url: "https://miro.medium.com/max/700/1*41E7KLIvzPvisZY_s4XR0A.png",
+    type: "soft",
     language: "English",
-    lesson: "10",
+    lesson: "11",
+    live: false,
+    rate: 4,
+    votes: 25
+  }, {
+    title: "Cooking Banga soup",
+    url: "https://sisijemimah.com/wp-content/uploads/2015/09/Banga-Soup.jpg",
+    type: "hard",
+    language: "English",
+    lesson: "11",
     live: true,
     rate: 4,
+    votes: 18
+  }, {
+    title: "Fixing light",
+    url: "https://www.superprof.co.uk/blog/wp-content/uploads/2019/08/igor-ferreira-IgVO4R3AlaU-unsplash-1060x596.jpg",
+    type: "hard",
+    language: "English",
+    lesson: "19",
+    live: false,
+    rate: 5,
+    votes: 5
+  }, {
+    title: "Vue",
+    url: "https://hackernoon.com/hn-images/1*ACR0gj0wbx91V_xgURifWg.png",
+    type: "soft",
+    language: "English",
+    lesson: "8",
+    live: true,
+    rate: 3,
     votes: 15
   }];
 
@@ -50538,21 +50602,21 @@ function Home() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: ""
+    src: "https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/define_location.png"
   }), /*#__PURE__*/_react.default.createElement("h4", null, "Learn with experts"), /*#__PURE__*/_react.default.createElement("p", null, "With amazing skills our experts are here to help harness those potentials.")), /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: ""
+    src: "https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/define_location.png"
   }), /*#__PURE__*/_react.default.createElement("h4", null, "Learn with experts"), /*#__PURE__*/_react.default.createElement("p", null, "With amazing skills our experts are here to help harness those potentials."))), /*#__PURE__*/_react.default.createElement("div", {
     className: "toter"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: ""
+    src: "https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/define_location.png"
   }), /*#__PURE__*/_react.default.createElement("h4", null, "Learn with experts"), /*#__PURE__*/_react.default.createElement("p", null, "With amazing skills our experts are here to help harness those potentials.")), /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
   }, /*#__PURE__*/_react.default.createElement("img", {
-    src: ""
+    src: "https://findicons.com/files/icons/2711/free_icons_for_windows8_metro/128/define_location.png"
   }), /*#__PURE__*/_react.default.createElement("h4", null, "Learn with experts"), /*#__PURE__*/_react.default.createElement("p", null, "With amazing skills our experts are here to help harness those potentials."))))), /*#__PURE__*/_react.default.createElement("div", {
     className: "courses"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "The world's largest selection of courses"), /*#__PURE__*/_react.default.createElement("p", {
@@ -50561,9 +50625,12 @@ function Home() {
     className: "shows"
   }, map.map(function (i, k) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "mini-card"
+      className: "mini-card",
+      onClick: function onClick() {
+        isAuthenticated && props.history.push("/course/".concat(i.title));
+      }
     }, /*#__PURE__*/_react.default.createElement("img", {
-      src: ""
+      src: i.url
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "lang"
     }, /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("p", null, i.language)), /*#__PURE__*/_react.default.createElement("h2", null, i.title), /*#__PURE__*/_react.default.createElement("div", {
@@ -50595,25 +50662,35 @@ function Home() {
     className: "soft"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Top Soft Skills Categories"), /*#__PURE__*/_react.default.createElement("div", {
     className: "shows"
-  }, map.map(function (i) {
+  }, map.filter(function (i) {
+    return i.type == "soft";
+  }).map(function (i) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "cat"
+      className: "cat",
+      onClick: function onClick() {
+        isAuthenticated && props.history.push("/course/".concat(i.title));
+      }
     }, /*#__PURE__*/_react.default.createElement("img", {
-      src: ""
-    }), /*#__PURE__*/_react.default.createElement("h3", null, "Python"));
+      src: i.url
+    }), /*#__PURE__*/_react.default.createElement("h3", null, i.title));
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "soft hard"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Top Hard Skills Categories"), /*#__PURE__*/_react.default.createElement("div", {
     className: "shows"
-  }, map.map(function (i) {
+  }, map.filter(function (i) {
+    return i.type != "soft";
+  }).map(function (i) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "cat"
+      className: "cat",
+      onClick: function onClick() {
+        isAuthenticated && props.history.push("/course/".concat(i.title));
+      }
     }, /*#__PURE__*/_react.default.createElement("img", {
-      src: ""
-    }), /*#__PURE__*/_react.default.createElement("h3", null, "Fishing"));
+      src: i.url
+    }), /*#__PURE__*/_react.default.createElement("h3", null, i.title));
   }))));
 }
-},{"react":"node_modules/react/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./home.css":"pages/home.css","./assets/IMG-20201209-WA0012.jpg":"pages/assets/IMG-20201209-WA0012.jpg"}],"pages/footer.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","@fortawesome/react-fontawesome":"node_modules/@fortawesome/react-fontawesome/index.es.js","@auth0/auth0-react":"node_modules/@auth0/auth0-react/dist/auth0-react.esm.js","@fortawesome/free-solid-svg-icons":"node_modules/@fortawesome/free-solid-svg-icons/index.es.js","./home.css":"pages/home.css","./assets/IMG-20201209-WA0012.jpg":"pages/assets/IMG-20201209-WA0012.jpg"}],"pages/footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -50651,7 +50728,552 @@ function Footer() {
 }
 },{"react":"node_modules/react/index.js","./footer.css":"pages/footer.css","./assets/IMG-20201209-WA0001.jpg":"pages/assets/IMG-20201209-WA0001.jpg"}],"pages/assets/loading.svg":[function(require,module,exports) {
 module.exports = "/loading.62bfc5df.svg";
-},{}],"App.js":[function(require,module,exports) {
+},{}],"node_modules/react-meta-tags/lib/meta_tags_context.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = require("react");
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/** context class which passes extract fuunction to MetaTags Component **/
+var MetaTagsContext =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MetaTagsContext, _Component);
+
+  function MetaTagsContext() {
+    _classCallCheck(this, MetaTagsContext);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MetaTagsContext).apply(this, arguments));
+  }
+
+  _createClass(MetaTagsContext, [{
+    key: "getChildContext",
+    value: function getChildContext() {
+      return {
+        extract: this.props.extract
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react.Children.only(this.props.children);
+    }
+  }]);
+
+  return MetaTagsContext;
+}(_react.Component);
+
+_defineProperty(MetaTagsContext, "childContextTypes", {
+  extract: _propTypes.default.func
+});
+
+var _default = MetaTagsContext;
+exports.default = _default;
+module.exports = exports.default;
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js"}],"node_modules/react-meta-tags/lib/utils.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.filterAndArrangeTags = filterAndArrangeTags;
+exports.getDuplicateTitle = getDuplicateTitle;
+exports.getDuplicateCanonical = getDuplicateCanonical;
+exports.getDuplicateMeta = getDuplicateMeta;
+exports.appendChild = appendChild;
+exports.removeChild = removeChild;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var camelCaseProps = ['itemProp'];
+var uniqueIdentifiersI = ['property', 'name', 'itemprop'];
+var uniqueIdentifiers = uniqueIdentifiersI.concat(camelCaseProps); //case sensitive props is defined in case anyone defined the lowercase prop
+
+var uniqueIdentifiersAll = uniqueIdentifiers.concat(['id']);
+/**
+  Note:
+  1. In server side we will add meta tags and title at last after fitering
+  2. In client we will match and replace meta tagString
+  3. For now we will not support link and other tags properly, they can be added but we will not check for uniqueness and will not decide placement
+**/
+
+function filterOutMetaWithId(metas) {
+  metas = Array.prototype.slice.call(metas || []);
+  return metas.filter(function (meta) {
+    return !meta.id;
+  });
+}
+
+function filterAndArrangeTags(headElms) {
+  var title = null,
+      canonicalLink = null;
+  var metas = [],
+      rest = [];
+  headElms.forEach(function (elm) {
+    var type = elm.type,
+        props = elm.props;
+
+    if (type === 'title') {
+      title = elm;
+    } else if (type === 'link' && props.rel === 'canonical') {
+      canonicalLink = elm;
+    } else if (type === 'meta') {
+      metas.push(elm);
+    } else {
+      rest.push(elm);
+    }
+  });
+  return [title].concat(_toConsumableArray(removeDuplicateMetas(metas)), [canonicalLink], rest);
+}
+
+function removeDuplicateMetas(metas) {
+  var addedMeta = {}; //initialize all the identifiers with empty array
+
+  uniqueIdentifiersAll.forEach(function (identifier) {
+    addedMeta[identifier] = [];
+  });
+  var filteredMetas = [];
+
+  var _loop = function _loop(i) {
+    var meta = metas[i];
+    var id = meta.props.id;
+    var addMeta = false; //if has id and element with id is not present than always add meta
+
+    if (id) {
+      addMeta = !addedMeta.id[id]; //for any other unique identifier check if meta already available with same identifier which doesn't have id
+    } else {
+      addMeta = uniqueIdentifiers.filter(function (identifier) {
+        var identifierValue = meta.props[identifier];
+        var existing = addedMeta[identifier][identifierValue];
+        return existing && !existing.props.id;
+      }).length === 0;
+    }
+
+    if (addMeta) {
+      filteredMetas.unshift(meta); //add meta as added 
+
+      uniqueIdentifiersAll.forEach(function (identifier) {
+        var identifierValue = meta.props[identifier];
+        if (identifierValue) addedMeta[identifier][identifierValue] = meta;
+      });
+    }
+  };
+
+  for (var i = metas.length - 1; i >= 0; i--) {
+    _loop(i);
+  }
+
+  return filteredMetas;
+}
+
+function getDuplicateTitle() {
+  return document.head.querySelectorAll('title');
+}
+
+function getDuplicateCanonical() {
+  return document.head.querySelectorAll('link[rel="canonical"]');
+}
+
+function getDuplicateMeta(meta) {
+  var head = document.head;
+  var id = meta.id; //if has id and element with id is not present than return the element
+
+  if (id) {
+    return id && head.querySelector("#".concat(id));
+  } //for any other unique identifier check if metas already available with same identifier which doesn't have id
+
+
+  return uniqueIdentifiersI.reduce(function (duplicates, identifier) {
+    var identifierValue = meta.getAttribute(identifier);
+    return identifierValue ? duplicates.concat(filterOutMetaWithId(head.querySelectorAll("[".concat(identifier, " = \"").concat(identifierValue, "\"]")))) : duplicates;
+  }, []);
+} //function to append childrens on a parent
+
+
+function appendChild(parent, childrens) {
+  if (childrens.length === undefined) childrens = [childrens];
+  var docFrag = document.createDocumentFragment(); //we used for loop instead of forEach because childrens can be array like object
+
+  for (var i = 0, ln = childrens.length; i < ln; i++) {
+    docFrag.appendChild(childrens[i]);
+  }
+
+  parent.appendChild(docFrag);
+}
+
+function removeChild(parent, childrens) {
+  if (childrens.length === undefined) childrens = [childrens];
+
+  for (var i = 0, ln = childrens.length; i < ln; i++) {
+    parent.removeChild(childrens[i]);
+  }
+}
+},{}],"node_modules/react-meta-tags/lib/meta_tags.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _utils = require("./utils");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/** An wrapper component to wrap element which need to shifted to head **/
+var MetaTags =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MetaTags, _Component);
+
+  function MetaTags() {
+    _classCallCheck(this, MetaTags);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MetaTags).apply(this, arguments));
+  }
+
+  _createClass(MetaTags, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.temporaryElement = document.createElement('div');
+      this.handleChildrens();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(oldProps) {
+      if (oldProps.children !== this.props.children) {
+        this.handleChildrens();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.temporaryElement) {
+        _reactDom.default.unmountComponentAtNode(this.temporaryElement);
+      }
+    }
+  }, {
+    key: "extractChildren",
+    value: function extractChildren() {
+      var extract = this.context.extract;
+      var children = this.props.children;
+
+      if (!children) {
+        return;
+      }
+
+      if (extract) {
+        extract(children);
+      }
+    }
+  }, {
+    key: "handleChildrens",
+    value: function handleChildrens() {
+      var _this = this;
+
+      var children = this.props.children;
+
+      if (this.context.extract || !children) {
+        return;
+      }
+
+      var headComponent = _react.default.createElement("div", {
+        className: "react-head-temp"
+      }, children);
+
+      _reactDom.default.render(headComponent, this.temporaryElement, function () {
+        var childStr = _this.temporaryElement.innerHTML; //if html is not changed return
+
+        if (_this.lastChildStr === childStr) {
+          return;
+        }
+
+        _this.lastChildStr = childStr;
+
+        var tempHead = _this.temporaryElement.querySelector('.react-head-temp'); // .react-head-temp might not exist when triggered from async action
+
+
+        if (tempHead === null) {
+          return;
+        }
+
+        var childNodes = Array.prototype.slice.call(tempHead.children);
+        var head = document.head;
+        var headHtml = head.innerHTML; //filter children remove if children has not been changed
+
+        childNodes = childNodes.filter(function (child) {
+          return headHtml.indexOf(child.outerHTML) === -1;
+        }); //create clone of childNodes
+
+        childNodes = childNodes.map(function (child) {
+          return child.cloneNode(true);
+        }); //remove duplicate title and meta from head
+
+        childNodes.forEach(function (child) {
+          var tag = child.tagName.toLowerCase();
+
+          if (tag === 'title') {
+            var title = (0, _utils.getDuplicateTitle)();
+            if (title) (0, _utils.removeChild)(head, title);
+          } else if (tag === 'meta') {
+            var meta = (0, _utils.getDuplicateMeta)(child);
+            if (meta) (0, _utils.removeChild)(head, meta);
+          } else if (tag === 'link' && child.rel === 'canonical') {
+            var link = (0, _utils.getDuplicateCanonical)(child);
+            if (link) (0, _utils.removeChild)(head, link);
+          }
+        });
+        (0, _utils.appendChild)(document.head, childNodes);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.extractChildren();
+      return null;
+    }
+  }]);
+
+  return MetaTags;
+}(_react.Component);
+
+_defineProperty(MetaTags, "contextTypes", {
+  extract: _propTypes.default.func
+});
+
+var _default = MetaTags;
+exports.default = _default;
+module.exports = exports.default;
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","react-dom":"node_modules/react-dom/index.js","./utils":"node_modules/react-meta-tags/lib/utils.js"}],"node_modules/react-meta-tags/lib/react_title.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _meta_tags = _interopRequireDefault(require("./meta_tags"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var ReactTitle =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ReactTitle, _Component);
+
+  function ReactTitle() {
+    _classCallCheck(this, ReactTitle);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ReactTitle).apply(this, arguments));
+  }
+
+  _createClass(ReactTitle, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_meta_tags.default, null, _react.default.createElement("title", null, this.props.title));
+    }
+  }]);
+
+  return ReactTitle;
+}(_react.Component);
+
+_defineProperty(ReactTitle, "propTypes", {
+  title: _propTypes.default.string
+});
+
+var _default = ReactTitle;
+exports.default = _default;
+module.exports = exports.default;
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","./meta_tags":"node_modules/react-meta-tags/lib/meta_tags.js"}],"node_modules/react-meta-tags/lib/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "MetaTagsContext", {
+  enumerable: true,
+  get: function get() {
+    return _meta_tags_context.default;
+  }
+});
+Object.defineProperty(exports, "MetaTags", {
+  enumerable: true,
+  get: function get() {
+    return _meta_tags.default;
+  }
+});
+Object.defineProperty(exports, "ReactTitle", {
+  enumerable: true,
+  get: function get() {
+    return _react_title.default;
+  }
+});
+exports.default = void 0;
+
+var _meta_tags_context = _interopRequireDefault(require("./meta_tags_context"));
+
+var _meta_tags = _interopRequireDefault(require("./meta_tags"));
+
+var _react_title = _interopRequireDefault(require("./react_title"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = _meta_tags.default;
+exports.default = _default;
+},{"./meta_tags_context":"node_modules/react-meta-tags/lib/meta_tags_context.js","./meta_tags":"node_modules/react-meta-tags/lib/meta_tags.js","./react_title":"node_modules/react-meta-tags/lib/react_title.js"}],"pages/videos.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"D:/john/nvm/v11.0.0/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"pages/videos.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Videos;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactMetaTags = _interopRequireDefault(require("react-meta-tags"));
+
+require("./videos.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function Videos(props) {
+  var _useState = (0, _react.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      title = _useState2[0],
+      setTitle = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    var tit = props.match.params.title;
+    setTitle(tit);
+  });
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactMetaTags.default, null, /*#__PURE__*/_react.default.createElement("meta", {
+    name: "monetization",
+    content: "$ilp.uphold.com/ibnzJLZBmb28"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "vids"
+  }, /*#__PURE__*/_react.default.createElement("p", null, "This page uses web monetization with coil, to understand more ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://coil.com"
+  }, "here")), /*#__PURE__*/_react.default.createElement("h1", null, title), /*#__PURE__*/_react.default.createElement("iframe", {
+    src: "https://www.youtube.com/embed/mglJoVAGkuE",
+    frameborder: "0",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+    allowfullscreen: true
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      props.history.push('/');
+    }
+  }, "Return")));
+}
+},{"react":"node_modules/react/index.js","react-meta-tags":"node_modules/react-meta-tags/lib/index.js","./videos.css":"pages/videos.css"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -50673,6 +51295,8 @@ var _footer = _interopRequireDefault(require("./pages/footer"));
 
 var _loading = _interopRequireDefault(require("./pages/assets/loading.svg"));
 
+var _videos = _interopRequireDefault(require("./pages/videos"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -50691,9 +51315,13 @@ function App() {
     exact: true,
     path: "/",
     component: _home.default
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/course/:title",
+    component: _videos.default
   })), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","@auth0/auth0-react":"node_modules/@auth0/auth0-react/dist/auth0-react.esm.js","./pages/nav":"pages/nav.js","./pages/home":"pages/home.js","./pages/footer":"pages/footer.js","./pages/assets/loading.svg":"pages/assets/loading.svg"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","@auth0/auth0-react":"node_modules/@auth0/auth0-react/dist/auth0-react.esm.js","./pages/nav":"pages/nav.js","./pages/home":"pages/home.js","./pages/footer":"pages/footer.js","./pages/assets/loading.svg":"pages/assets/loading.svg","./pages/videos":"pages/videos.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -50708,8 +51336,7 @@ var _auth0React = require("@auth0/auth0-react");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var onRedirectCallback = function onRedirectCallback(appState) {
-  window.location.href = "/";
+var onRedirectCallback = function onRedirectCallback(appState) {//window.location.href="/"
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_auth0React.Auth0Provider, {
@@ -50717,7 +51344,7 @@ _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouter
   clientId: "uhauRBxvRrbVVb07ck6lHdL4wWDZlAjv",
   audience: "https://dev-jgc-ur9b.us.auth0.com/api/v2/",
   scope: "read:current_user update:current_user_metadata",
-  redirectUri: "http://localhost:3000",
+  redirectUri: "https://fundahacks.netlify.app",
   onRedirectCallback: onRedirectCallback
 }, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById('root'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"App.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","@auth0/auth0-react":"node_modules/@auth0/auth0-react/dist/auth0-react.esm.js"}],"D:/john/nvm/v11.0.0/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -50748,7 +51375,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61399" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50736" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

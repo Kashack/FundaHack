@@ -5,6 +5,7 @@ import Nav from './pages/nav'
 import Home from'./pages/home'
 import Footer from './pages/footer'
 import img3 from './pages/assets/loading.svg'
+import Videos from './pages/videos';
 
 export default function App() {
     const { isLoading, error } = useAuth0();
@@ -16,6 +17,7 @@ export default function App() {
         <Nav />
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/course/:title" component={Videos} />
         </Switch>
         <Footer />
         </>
