@@ -1,0 +1,23 @@
+.vids{
+    height: 100vh;
+    width: 100%;
+    background-color: #ddd;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+}
+.vids iframe{
+    width: 45rem;
+    height: 25rem;
+}
+.vids button{
+    border:0px;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 7rem;
+    background-color: red;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}

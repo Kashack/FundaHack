@@ -1,0 +1,21 @@
+footer{
+    width:100%;
+    background-color: white;
+    display: flex;
+}
+footer .cover{
+    width: 65%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: smaller;
+}
+.log img{
+    height: 3rem;
+    width: 3rem;
+}
+.us{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}

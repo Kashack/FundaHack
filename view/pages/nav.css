@@ -1,0 +1,73 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4.5rem;
+    width: 100vw;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px grey;
+}
+nav img{
+    height: 3rem;
+    width: 3rem;
+    margin-left: 3rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav ul li{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: orange;
+}
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav .div{
+    width: 15%;
+    margin-right: 3rem;
+}
+.nav .i{
+    color: orange;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.signup{
+    height: 2.5rem;
+    color:white;
+    background-color: orange;
+    width: 5rem;
+    cursor: pointer;
+    border:0px;
+}
+.logout, .login{
+    height: 2.5rem;
+    color:orange;
+    border: 1px solid orange;
+    width: 5rem;
+    cursor: pointer;
+}
+.login:hover, .logout:hover{
+    color: white;
+    background-color: orange;
+}
+.signup:hover{
+    color:orange;
+    background-color: white;
+    border: 1px solid orange;
+}
+.picture{
+    margin-right: 3rem;
+    height:3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+.loader{
+    margin-left: 45%;
+    margin-top: 25%;
+}
