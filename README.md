@@ -13,7 +13,7 @@ Features to be added - Web monetization platform for authors
                        Vonage communication api for whatsapp and messenger
                        Video storage
 
-Technologies used:
+Technologies used so far:
 
  - ReactJs
  - NodeJs
